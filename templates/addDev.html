@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    添加设备
+{% endblock %}
+{% block body_content %}
+<form class="form-horizontal">
+        <fieldset>
+          <legend>请添加网络设备如下信息：</legend>
+          <div class="control-group error">
+            <label class="control-label" for="inputError">设备名称</label>
+            <div class="controls">
+              <input type="text" id="inputError">
+{#              <span class="help-inline">Please correct the error</span>#}
+            </div>
+          </div>
+		  <div class="control-group warning">
+            <label class="control-label" for="inputWarning">设备IP</label>
+            <div class="controls">
+              <input type="text" id="inputWarning">
+{#              <span class="help-inline">Something may have gone wrong</span> #}
+            </div>
+          </div>
+		  <div class="control-group success">
+            <label class="control-label" for="inputSuccess">登录方式</label>
+            <div class="controls">
+              <select id="selectError">
+                <option>SSH</option>
+                <option>TELNET</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+{#              <span class="help-inline">Successfully entered</span>#}
+            </div>
+          </div>
+		  <div class="control-group success">
+            <label class="control-label" for="selectError">分类</label>
+            <div class="controls">
+              <select id="selectError">
+                <option>路由器</option>
+                <option>交换机</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+{#              <span class="help-inline">Successfully selected</span>#}
+            </div>
+          </div>
+        <div class="control-group">
+            <div class="controls ">
+                <button type="submit" class="btn btn-success" id="addButton" >添加</button></div>
+            </div>
+
+        </fieldset>
+</form>
+{% endblock %}
